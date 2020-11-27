@@ -9,12 +9,14 @@ public class Logica {
 	private PApplet app;
 	private LinkedList<Bolita> person;
 	private String[] info;
+	private boolean toque;
 	
 	public Logica(PApplet app) {
 		this.app = app;
 		this.person = new LinkedList<Bolita>();
 		this.info = app.loadStrings("../txt/info.txt"); //cargando el text
 		agregarPerson(); //para llamar todo lo que está dentro del método agregarPerson
+		this.toque = false;
 	}
 
 	public void agregarPerson() { //para el linkedList
@@ -48,10 +50,28 @@ public class Logica {
 	
 	public void drawBolita() {
 		//para que se pinten las bolitas :)
-		for (int i = 0; i < person.size(); i++) {
+		for (int i = 0; i < 100; i++) {
 			this.person.get(i).draw(); //sin esto no se pinta na'
-				new Thread(this.person.get(i)).start(); //sin esto no se mueven
-				
+			new Thread(this.person.get(i)).start(); //sin esto no se mueven
+			
+		//AÚN NO FUNCIONA BIEN, dice que está vacío
+		//condición de choque
+//			for (int j = 0; j < 100; j++) {
+//				float distanciaB = 
+//						PApplet.dist(this.person.get(i).getPosX(), //comparar objetos, función dist(x1,y1,x2,y2);
+//						this.person.get(i).getPosY(),
+//						this.person.get(j).getPosX(),
+//						this.person.get(j).getPosY());
+//					if(distanciaB < 5) {
+//						this.toque = true;
+//						//recordar que en las CONDICIONES SIEMPRE SON ==
+//						if(toque == true && this.person.get(i).isSiInf() == true){
+//							this.person.remove(j);
+//							this.person.add(new Infectados(app,this.person.get(j).getPosX(),this.person.get(j).getPosY()));	
+//						}
+//					}
+//					this.toque = false;
+//			}
 		}
 		
 	}

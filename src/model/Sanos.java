@@ -9,6 +9,7 @@ public class Sanos extends Bolita{
 		this.r = 0;
 		this.g = 255;
 		this.b = 0;
+		this.siInf = false;
 	}
 
 	

@@ -9,6 +9,7 @@ public class Recuperados extends Bolita {
 		this.r = 0;
 		this.g = 0;
 		this.b = 255;
+		this.siInf = false;
 	}
 
 	

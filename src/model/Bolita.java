@@ -7,6 +7,7 @@ public abstract class Bolita implements Runnable {
 	//Se me olvidaba que necesitan colores xD ahh y el tamaño ups y la direccion jeje
 	protected int posX, posY, r, g, b, tam, dirX, dirY, vel;
 	protected PApplet app; 
+	protected boolean siInf;
 	
 	public Bolita(PApplet app, int posX, int posY) {
 		this.app= app;
@@ -15,7 +16,8 @@ public abstract class Bolita implements Runnable {
 		this.tam = 7; //7 pixeles
 		this.dirX = (int) app.random(-1,2); //para que las direcciones queden random
 		this.dirY = (int) app.random(-1,2); 
-		this.vel = 10;
+		this.vel = 5;
+		
 	}
 	
 	public void mover() {
@@ -45,8 +47,57 @@ public abstract class Bolita implements Runnable {
 		}
 	}
 	
-	public abstract void draw(); 
-		
+	public abstract void draw();
+
+	public int getPosX() {
+		return posX;
+	}
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+	public int getPosY() {
+		return posY;
+	}
+
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
+
+	public int getR() {
+		return r;
+	}
+
+	public void setR(int r) {
+		this.r = r;
+	}
+
+	public int getG() {
+		return g;
+	}
+
+	public void setG(int g) {
+		this.g = g;
+	}
+
+	public int getB() {
+		return b;
+	}
+
+	public void setB(int b) {
+		this.b = b;
+	}
+
+	public boolean isSiInf() {
+		return siInf;
+	}
+
+	public void setSiInf(boolean siInf) {
+		this.siInf = siInf;
+	} 
+	
+	
 	
 	
 }

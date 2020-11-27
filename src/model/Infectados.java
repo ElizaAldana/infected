@@ -9,6 +9,7 @@ public class Infectados extends Bolita{
 		this.r = 255;
 		this.g = 0;
 		this.b = 0;
+		this.siInf = true;
 	}
 
 	
