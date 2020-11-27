@@ -29,13 +29,27 @@ public class Logica {
 						this.person.add(new Sanos(app, (int) app.random(1,600), (int) app.random(1,500))); //para que agregue personas en person y las posiciones random
 					}
 			}
+			
+			if(infoSplit[0].equals("infectadas")) {
+				int cantPersonasInf = numinfoSplit; //acá obtengo el núm que está en info de infectados (1)
+					for (int j = 0; j < cantPersonasInf; j++) {
+						this.person.add(new Infectados(app, (int) app.random(1,600), (int) app.random(1,500))); //para que agregue personas en person y las posiciones random
+					}
+			}
+			
+			if(infoSplit[0].equals("recuperadas")) {
+				int cantPersonasRec = numinfoSplit; //acá obtengo el núm que está en info de recuperados (1)
+					for (int j = 0; j < cantPersonasRec; j++) {
+						this.person.add(new Recuperados(app, (int) app.random(1,600), (int) app.random(1,500))); //para que agregue personas en person y las posiciones random
+					}
+			}
 		}
 	}
 	
 	public void drawBolita() {
 		//para que se pinten las bolitas :)
 		for (int i = 0; i < person.size(); i++) {
-			this.person.get(i).draw();
+			this.person.get(i).draw(); //sin esto no se pinta na'
 		}
 		
 	}

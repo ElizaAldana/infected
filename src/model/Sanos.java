@@ -7,8 +7,8 @@ public class Sanos extends Bolita{
 	public Sanos(PApplet app, int posX, int posY) {
 		super(app, posX, posY);
 		this.r = 0;
-		this.g = 0;
-		this.b = 255;
+		this.g = 255;
+		this.b = 0;
 	}
 
 	
