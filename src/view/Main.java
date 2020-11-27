@@ -18,11 +18,11 @@ public class Main extends PApplet{
 	}
 	
 	public void setup() {
-		
+		this.controller = new Controller(this);
 	}
 
 	public void draw() {
 		background(0);
-
+		controller.drawPersonas();
 	}
 }

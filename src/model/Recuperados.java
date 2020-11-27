@@ -4,20 +4,15 @@ import processing.core.PApplet;
 
 public class Recuperados extends Bolita {
 
-	public Recuperados(PApplet app) {
-		super(app);
+	public Recuperados(PApplet app, int posX, int posY) {
+		super(app, posX, posY);
 	}
 
 	
-	public void drawR() {
+	public void draw() {
 		
 	}
 	
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	
 }
