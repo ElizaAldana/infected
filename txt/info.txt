@@ -1,3 +1,3 @@
-sanas:
-infectadas:
-recuperadas:
+sanas:98
+infectadas:1
+recuperadas:1
