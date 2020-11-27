@@ -50,6 +50,8 @@ public class Logica {
 		//para que se pinten las bolitas :)
 		for (int i = 0; i < person.size(); i++) {
 			this.person.get(i).draw(); //sin esto no se pinta na'
+				new Thread(this.person.get(i)).start(); //sin esto no se mueven
+				
 		}
 		
 	}
